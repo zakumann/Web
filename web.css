@@ -1,0 +1,19 @@
+h1{
+    border-bottom:10px solid red;
+    padding:30px;
+}
+
+@media all and (min-width: 480px){
+    #container{
+        display:grid;
+        grid-template-columns: 150px 1fr;
+    }
+}
+
+@media all and (max-width: 480px){
+
+}
+
+body{
+    font-family: 'Palette Mosaic', cursive;
+}
