@@ -9,6 +9,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     </head>
     <body>
+        <script>
+            function night(){
+                document.querySelector('body').style.backgroundColor='black';
+                document.querySelector('body').style.color='white';
+                this.value = "Day"
+            }
+            function day(){
+                document.querySelector('body').style.backgroundColor='white';
+                document.querySelector('body').style.color='black';
+                this.value='Night';
+            }
+            </script>
+            <input type="button" value="Night" onclick="
+            let btn = this;
+            if(btn.value === 'Night'){
+                night();
+                btn.value = 'Day';
+            } else {
+                day();
+                btn.value = 'Night';
+            }
+            ">
         <h1><a href="index.html">WEB</a></h1>
         <div id="container">
             <ol>

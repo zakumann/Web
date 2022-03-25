@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Web</title>
-    <style>
-        h1{
-            border-bottom: 5px solid red;
-        }
-    </style>
 </head>
 <body>
-    <input type="button" value="night" onclick="
-    if(value === 'night'){
+    <script>
+    function night(){
         document.querySelector('body').style.backgroundColor='black';
         document.querySelector('body').style.color='white';
-        this.value='day';
-    } else {
+        this.value = "Day"
+    }
+    function day(){
         document.querySelector('body').style.backgroundColor='white';
         document.querySelector('body').style.color='black';
-        this.value='night';
+        this.value='Night';
     }
-
+    </script>
+    <input type="button" value="Night" onclick="
+    let btn = this;
+    if(btn.value === 'Night'){
+        night();
+        btn.value = 'Day';
+    } else {
+        day();
+        btn.value = 'Night';
+    }
     ">
     <h1><a href="index.html">WEB</a></h1>
     <ol>
@@ -32,7 +37,6 @@
         <h2>Hello Web</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem hic voluptate, quae enim voluptatum distinctio impedit odit natus adipisci laboriosam eaque eveniet porro eius doloribus ipsam at exercitationem reprehenderit perferendis!</p>
     </div>
-    
-
+    <link rel="stylesheet" href="style.css">
 </body>
 </html>
