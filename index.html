@@ -18,26 +18,32 @@
         <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     </head>
     <body>
-        
-        <input type="button" id="dnbtn" value="NightMode" onclick="
+        <script>
+            function night(){
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                let as = document.querySelectorAll('a');
+                for(let i=0;i<as.length;i++){
+                    as[i].style.color = 'white';
+                }
+            }
+            function day(){
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+                let as = document.querySelectorAll('a');
+                for(let i=0;i<as.length;i++){
+                    as[i].style.color = 'black';
+                }
+            }
+        </script>
+        <input type="button" value="NightMode" onclick="
         let btn = this;
-        if(value === 'NightMode'){
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
+        if(btn.value === 'NightMode'){
+            night();
             btn.value = 'DayMode';
-            document.querySelector('#a1').style.color = 'white';
-            document.querySelector('#a2').style.color = 'white';
-            document.querySelector('#a3').style.color = 'white';
-            document.querySelector('#a4').style.color = 'white';
-            
         } else {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
+            day();
             btn.value = 'NightMode';
-            document.querySelector('#a1').style.color = 'black';
-            document.querySelector('#a2').style.color = 'black';
-            document.querySelector('#a3').style.color = 'black';
-            document.querySelector('#a4').style.color = 'black';
         }
         ">
 
