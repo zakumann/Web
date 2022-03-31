@@ -1,11 +1,12 @@
 from flask import Flask, request, redirect
 
+
 app = Flask(__name__)
 
 topics = [
   {"id":1, "title":"HTML", "body":"HTML is ...."},
   {"id":2, "title":"CSS", "body":"CSS is ...."},
-  {"id":3, "title":"JS", "body":"Javascript is ...."},
+  {"id":3, "title":"JS", "body":"JS is ...."}
 ]
 nextId = 4
 
